@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fd815145bde84cf91d0508feef4e49aa {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_fd815145bde84cf91d0508feef4e49aa" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_fd815145bde84cf91d0508feef4e49aa = L.map(
+                "map_fd815145bde84cf91d0508feef4e49aa",
+                {
+                    center: [41.8781, -87.6298],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7803fc45d8dea36424de950bae2600f9 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_7803fc45d8dea36424de950bae2600f9.addTo(map_fd815145bde84cf91d0508feef4e49aa);
+        
+    
+            var marker_ed1879a1537d0e0485ccb4bfce61ac2c = L.marker(
+                [41.91033, -87.6377],
+                {}
+            ).addTo(map_fd815145bde84cf91d0508feef4e49aa);
+        
+    
+            var icon_80fd40530910dedca56b9e1513dad1e1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "train", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ed1879a1537d0e0485ccb4bfce61ac2c.setIcon(icon_80fd40530910dedca56b9e1513dad1e1);
+        
+    
+        var popup_794c9660b168ba907fe608ba4e89a9de = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0debcde1788bee22d21d263bdcee46da = $(`<div id="html_0debcde1788bee22d21d263bdcee46da" style="width: 100.0%; height: 100.0%;">Train 417 to Kimball arriving at 2024-06-29T23:22:18</div>`)[0];
+                popup_794c9660b168ba907fe608ba4e89a9de.setContent(html_0debcde1788bee22d21d263bdcee46da);
+            
+        
+
+        marker_ed1879a1537d0e0485ccb4bfce61ac2c.bindPopup(popup_794c9660b168ba907fe608ba4e89a9de)
+        ;
+
+        
+    
+    
+            var marker_51477a34789534ca5f720b9e37223022 = L.marker(
+                [41.93602, -87.65327],
+                {}
+            ).addTo(map_fd815145bde84cf91d0508feef4e49aa);
+        
+    
+            var icon_83f32ae2a055ad3f04e87982913f9a3b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "train", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_51477a34789534ca5f720b9e37223022.setIcon(icon_83f32ae2a055ad3f04e87982913f9a3b);
+        
+    
+        var popup_ecb882407cbaaf6997cd4a9bab17d3a1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_28e37ed9fc88ff462f4647a672768f16 = $(`<div id="html_28e37ed9fc88ff462f4647a672768f16" style="width: 100.0%; height: 100.0%;">Train 418 to Kimball arriving at 2024-06-29T23:32:25</div>`)[0];
+                popup_ecb882407cbaaf6997cd4a9bab17d3a1.setContent(html_28e37ed9fc88ff462f4647a672768f16);
+            
+        
+
+        marker_51477a34789534ca5f720b9e37223022.bindPopup(popup_ecb882407cbaaf6997cd4a9bab17d3a1)
+        ;
+
+        
+    
+    
+            var marker_aaccdea09b94376251c58e066b260a2b = L.marker(
+                [41.96634, -87.68351],
+                {}
+            ).addTo(map_fd815145bde84cf91d0508feef4e49aa);
+        
+    
+            var icon_8af5576cfeadb3d88c0bf25ada7d4b9b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "train", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_aaccdea09b94376251c58e066b260a2b.setIcon(icon_8af5576cfeadb3d88c0bf25ada7d4b9b);
+        
+    
+        var popup_276dd3a944728212a567767973516390 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_53617b5b99f09b4d59a053efd16e2bfe = $(`<div id="html_53617b5b99f09b4d59a053efd16e2bfe" style="width: 100.0%; height: 100.0%;">Train 419 to Kimball arriving at 2024-06-29T23:44:28</div>`)[0];
+                popup_276dd3a944728212a567767973516390.setContent(html_53617b5b99f09b4d59a053efd16e2bfe);
+            
+        
+
+        marker_aaccdea09b94376251c58e066b260a2b.bindPopup(popup_276dd3a944728212a567767973516390)
+        ;
+
+        
+    
+    
+            var marker_57615f66bddc140e0888e9d3463260ad = L.marker(
+                [41.8963, -87.628],
+                {}
+            ).addTo(map_fd815145bde84cf91d0508feef4e49aa);
+        
+    
+            var icon_8efc54d70a998563b8a3dca93c3cce01 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_57615f66bddc140e0888e9d3463260ad.setIcon(icon_8efc54d70a998563b8a3dca93c3cce01);
+        
+    
+        var popup_4c725b4b2ce18773bff29af170d474d7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_518db09de5425788a39a26853cd52f52 = $(`<div id="html_518db09de5425788a39a26853cd52f52" style="width: 100.0%; height: 100.0%;">Chicago Station</div>`)[0];
+                popup_4c725b4b2ce18773bff29af170d474d7.setContent(html_518db09de5425788a39a26853cd52f52);
+            
+        
+
+        marker_57615f66bddc140e0888e9d3463260ad.bindPopup(popup_4c725b4b2ce18773bff29af170d474d7)
+        ;
+
+        
+    
+    
+            var marker_afd61742452e3be33eb635c0784fcca4 = L.marker(
+                [41.8903, -87.63548],
+                {}
+            ).addTo(map_fd815145bde84cf91d0508feef4e49aa);
+        
+    
+            var icon_01b10efa102d8737606871316b20da45 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_afd61742452e3be33eb635c0784fcca4.setIcon(icon_01b10efa102d8737606871316b20da45);
+        
+    
+        var popup_3f4c43b302f64e1d5410b53af351211a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_811d8084d0d76b9a84099cd0043a2903 = $(`<div id="html_811d8084d0d76b9a84099cd0043a2903" style="width: 100.0%; height: 100.0%;">Your Location</div>`)[0];
+                popup_3f4c43b302f64e1d5410b53af351211a.setContent(html_811d8084d0d76b9a84099cd0043a2903);
+            
+        
+
+        marker_afd61742452e3be33eb635c0784fcca4.bindPopup(popup_3f4c43b302f64e1d5410b53af351211a)
+        ;
+
+        
+    
+    
+            var marker_08f017ce062218cbaf2c24e431e854c0 = L.marker(
+                [41.8884, -87.6337],
+                {}
+            ).addTo(map_fd815145bde84cf91d0508feef4e49aa);
+        
+    
+            var icon_459c582052caad9c3ee4c877269f8ca3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_08f017ce062218cbaf2c24e431e854c0.setIcon(icon_459c582052caad9c3ee4c877269f8ca3);
+        
+    
+        var popup_854d5726ad763f42ba7327ff3f152357 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_23fc6d53b5dad2465a505693b546fdd8 = $(`<div id="html_23fc6d53b5dad2465a505693b546fdd8" style="width: 100.0%; height: 100.0%;">Closest Stop: Merchandise Mart</div>`)[0];
+                popup_854d5726ad763f42ba7327ff3f152357.setContent(html_23fc6d53b5dad2465a505693b546fdd8);
+            
+        
+
+        marker_08f017ce062218cbaf2c24e431e854c0.bindPopup(popup_854d5726ad763f42ba7327ff3f152357)
+        ;
+
+        
+    
+</script>
+</html>

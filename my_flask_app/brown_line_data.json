@@ -1,0 +1,72 @@
+{
+    "ctatt": {
+        "tmst": "2024-06-29T22:56:22",
+        "errCd": "0",
+        "errNm": null,
+        "eta": [
+            {
+                "staId": "40380",
+                "stpId": "30075",
+                "staNm": "Clark/Lake",
+                "stpDe": "Service at Outer Loop platform",
+                "rn": "413",
+                "rt": "Brn",
+                "destSt": "30249",
+                "destNm": "Kimball",
+                "trDr": "1",
+                "prdt": "2024-06-29T22:55:41",
+                "arrT": "2024-06-29T23:05:41",
+                "isApp": "0",
+                "isSch": "0",
+                "isDly": "0",
+                "isFlt": "0",
+                "flags": null,
+                "lat": "41.8903",
+                "lon": "-87.63548",
+                "heading": "167"
+            },
+            {
+                "staId": "40380",
+                "stpId": "30075",
+                "staNm": "Clark/Lake",
+                "stpDe": "Service at Outer Loop platform",
+                "rn": "417",
+                "rt": "Brn",
+                "destSt": "30249",
+                "destNm": "Kimball",
+                "trDr": "1",
+                "prdt": "2024-06-29T22:56:18",
+                "arrT": "2024-06-29T23:23:18",
+                "isApp": "0",
+                "isSch": "0",
+                "isDly": "0",
+                "isFlt": "0",
+                "flags": null,
+                "lat": "41.94099",
+                "lon": "-87.65342",
+                "heading": "178"
+            },
+            {
+                "staId": "40380",
+                "stpId": "30075",
+                "staNm": "Clark/Lake",
+                "stpDe": "Service at Outer Loop platform",
+                "rn": "418",
+                "rt": "Brn",
+                "destSt": "30249",
+                "destNm": "Kimball",
+                "trDr": "1",
+                "prdt": "2024-06-29T22:56:13",
+                "arrT": "2024-06-29T23:32:13",
+                "isApp": "0",
+                "isSch": "0",
+                "isDly": "0",
+                "isFlt": "0",
+                "flags": null,
+                "lat": "41.96536",
+                "lon": "-87.67539",
+                "heading": "153"
+            }
+        ]
+    }
+}

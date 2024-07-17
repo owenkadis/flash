@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTA Transit Tracker - Brown Line</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #004d40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .tracker {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .line-info, .schedule, .alerts, .historical-data {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .line-info h2, .schedule h2, .alerts h2, .historical-data h2 {
+            color: #004d40;
+            margin-top: 0;
+        }
+
+        .line-info p, .schedule p, .alerts p, .historical-data p {
+            font-size: 1.1em;
+            line-height: 1.5em;
+        }
+
+        .schedule-table, .alert-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .schedule-table th, .schedule-table td, .alert-table th, .alert-table td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        .schedule-table th, .alert-table th {
+            background-color: #004d40;
+            color: white;
+        }
+
+        .schedule-table tr:nth-child(even), .alert-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .cta-map {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .cta-map img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 5px;
+        }
+
+        .historical-chart {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #004d40;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .form-container {
+            background: #f4f4f9;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .form-container h3 {
+            margin-top: 0;
+            color: #004d40;
+        }
+
+        .form-container label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .form-container input, .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            background-color: #004d40;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #00332e;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CTA Transit Tracker</h1>
+        <p>Real-time updates for the CTA Brown Line</p>
+    </header>
+    <div class="container">
+        <div class="tracker">
+            <div class="line-info">
+                <h2>Brown Line Information</h2>
+                <p>The CTA Brown Line, also known as the Ravenswood Line, serves the Chicago Transit Authority's 'L' system. It runs 24/7 with frequent service during peak hours.</p>
+                <div class="cta-map">
+                    <img src="brown-line-map.jpg" alt="Brown Line Map">
+                </div>
+            </div>
+            <div class="schedule">
+                <h2>Next Arrivals</h2>
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Station</th>
+                            <th>Arrival Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="arrival-times">
+                        <!-- Dynamic content will be inserted here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="alerts">
+            <h2>Service Alerts</h2>
+            <table class="alert-table">
+                <thead>
+                    <tr>
+                        <th>Alert</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody id="alert-info">
+                    <!-- Dynamic content will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        <div class="historical-data">
+            <h2>Historical Data</h2>
+            <div id="historical-chart" class="historical-chart">
+                <!-- Chart will be rendered here -->
+            </div>
+        </div>
+        <div class="form-container">
+            <h3>Subscribe for Alerts</h3>
+            <form id="subscribe-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="frequency">Alert Frequency:</label>
+                <select id="frequency" name="frequency">
+                    <option value="immediate">Immediate</option>
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                </select>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 CTA Transit Tracker | All Rights Reserved</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Placeholder for JavaScript to fetch and display real-time data and alerts
+        document.addEventListener("DOMContentLoaded", function() {
+            // Fetch and display arrival times
+            fetch('https://api.cta-link.com/brown-line')
+                .then(response => response.json())
+                .then(data => {
+                    const arrivalTimes = document.getElementById('arrival-times');
+                    data.arrivals.forEach(arrival => {
+                        const row = document.createElement('tr');
+                        const stationCell = document.createElement('td');
+                        stationCell.textContent = arrival.station;
+                        const timeCell = document.createElement('td');
+                        timeCell.textContent = arrival.time;
+                        row.appendChild(stationCell);
+                        row.appendChild(timeCell);
+                        arrivalTimes.appendChild(row);
+                    });
+                })
+                .catch(error => console.error('Error fetching arrival times:', error));
+
+            // Fetch and display service alerts
+            fetch('https://api.cta-link.com/alerts')
+                .then(response => response.json())
+                .then(data => {
+                    const alertInfo = document.getElementById('alert-info');
+                    data.alerts.forEach(alert => {
+                        const row = document.createElement('tr');
+                        const alertCell = document.createElement('td');
+                        alertCell.textContent = alert.title;
+                        const detailsCell = document.createElement('td');
+                        detailsCell.textContent = alert.details;
+                        row.appendChild(alertCell);
+                        row.appendChild(detailsCell);
+                        alertInfo.appendChild(row);
+                    });
+                })
+                .catch(error => console.error('Error fetching alerts:', error));
+
+            // Historical data chart
+            const ctx = document.getElementById('historical-chart').getContext('2d');
+            const chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+                    datasets: [{
+                        label: 'Average Wait Time (minutes)',
+                        data: [10, 12, 8, 15, 9, 14],
+                        borderColor: 'rgba(0, 77, 64, 1)',
+                        backgroundColor: 'rgba(0, 77, 64, 0.2)',
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        x: {
+                            beginAtZero: true
+                        },
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // Subscribe form submission
+            const subscribeForm = document.getElementById('subscribe-form');
+            subscribeForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const email = document.getElementById('email').value;
+                const frequency = document.getElementById('frequency').value;
+                console.log(`Subscribed with email: ${email}, frequency: ${frequency}`);
+                alert('Subscription successful!');
+            });
+        });
+    </script>
+</body>
+</html>
